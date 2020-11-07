@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		CB8BB7CA2556B4A200EC035E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8BB7C92556B4A200EC035E /* AppDelegate.swift */; };
 		CB8BB7CC2556B4A200EC035E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8BB7CB2556B4A200EC035E /* SceneDelegate.swift */; };
-		CB8BB7CE2556B4A200EC035E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8BB7CD2556B4A200EC035E /* ViewController.swift */; };
-		CB8BB7D12556B4A200EC035E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8BB7CF2556B4A200EC035E /* Main.storyboard */; };
 		CB8BB7D32556B4A500EC035E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8BB7D22556B4A500EC035E /* Assets.xcassets */; };
 		CB8BB7D62556B4A500EC035E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8BB7D42556B4A500EC035E /* LaunchScreen.storyboard */; };
+		CB8BB7E52556B57000EC035E /* TimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8BB7E42556B57000EC035E /* TimeTableView.swift */; };
+		CB8BB7E92556B59200EC035E /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8BB7E82556B59200EC035E /* TimeTableViewController.swift */; };
+		CB8BB7EE2556C4A100EC035E /* TimeTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8BB7ED2556C4A100EC035E /* TimeTableModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB8BB7C62556B4A200EC035E /* HealthNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8BB7C92556B4A200EC035E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8BB7CB2556B4A200EC035E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB8BB7CD2556B4A200EC035E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CB8BB7D02556B4A200EC035E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB8BB7D22556B4A500EC035E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB8BB7D52556B4A500EC035E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB8BB7D72556B4A500EC035E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB8BB7E42556B57000EC035E /* TimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableView.swift; sourceTree = "<group>"; };
+		CB8BB7E82556B59200EC035E /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
+		CB8BB7ED2556C4A100EC035E /* TimeTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		CB8BB7C82556B4A200EC035E /* HealthNotification */ = {
 			isa = PBXGroup;
 			children = (
+				CB8BB7E32556B50300EC035E /* Models */,
+				CB8BB7E12556B4F000EC035E /* Views */,
+				CB8BB7E22556B4FB00EC035E /* Controllers */,
+				CB8BB7E02556B4DA00EC035E /* Supporting_files */,
+			);
+			path = HealthNotification;
+			sourceTree = "<group>";
+		};
+		CB8BB7E02556B4DA00EC035E /* Supporting_files */ = {
+			isa = PBXGroup;
+			children = (
 				CB8BB7C92556B4A200EC035E /* AppDelegate.swift */,
 				CB8BB7CB2556B4A200EC035E /* SceneDelegate.swift */,
-				CB8BB7CD2556B4A200EC035E /* ViewController.swift */,
-				CB8BB7CF2556B4A200EC035E /* Main.storyboard */,
 				CB8BB7D22556B4A500EC035E /* Assets.xcassets */,
 				CB8BB7D42556B4A500EC035E /* LaunchScreen.storyboard */,
 				CB8BB7D72556B4A500EC035E /* Info.plist */,
 			);
-			path = HealthNotification;
+			path = Supporting_files;
+			sourceTree = "<group>";
+		};
+		CB8BB7E12556B4F000EC035E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB8BB7E42556B57000EC035E /* TimeTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CB8BB7E22556B4FB00EC035E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB8BB7E82556B59200EC035E /* TimeTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB8BB7E32556B50300EC035E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB8BB7ED2556C4A100EC035E /* TimeTableModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +161,6 @@
 			files = (
 				CB8BB7D62556B4A500EC035E /* LaunchScreen.storyboard in Resources */,
 				CB8BB7D32556B4A500EC035E /* Assets.xcassets in Resources */,
-				CB8BB7D12556B4A200EC035E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +171,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB8BB7CE2556B4A200EC035E /* ViewController.swift in Sources */,
+				CB8BB7EE2556C4A100EC035E /* TimeTableModel.swift in Sources */,
 				CB8BB7CA2556B4A200EC035E /* AppDelegate.swift in Sources */,
 				CB8BB7CC2556B4A200EC035E /* SceneDelegate.swift in Sources */,
+				CB8BB7E92556B59200EC035E /* TimeTableViewController.swift in Sources */,
+				CB8BB7E52556B57000EC035E /* TimeTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CB8BB7CF2556B4A200EC035E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB8BB7D02556B4A200EC035E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CB8BB7D42556B4A500EC035E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,7 +316,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Y4YT75U8C;
-				INFOPLIST_FILE = HealthNotification/Info.plist;
+				INFOPLIST_FILE = HealthNotification/Supporting_files/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +335,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Y4YT75U8C;
-				INFOPLIST_FILE = HealthNotification/Info.plist;
+				INFOPLIST_FILE = HealthNotification/Supporting_files/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
