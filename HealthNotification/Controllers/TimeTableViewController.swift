@@ -7,16 +7,15 @@
 
 import UIKit
 
-//var time = TimeTableView()
-
 final class TimeTableViewController: UIViewController, UITableViewDelegate {
     
-    var times = ["10:00", "11:00", "12:00"]
-    
     private var tableView = UITableView()
+    var timesModel: [TimeTableModel] = [TimeTableModel]()
+//    var timesModel = Set<TimeTableModel>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        crateArray()
         setupTableView()
         setupConstraints()
     }
@@ -24,7 +23,7 @@ final class TimeTableViewController: UIViewController, UITableViewDelegate {
     private func setupTableView(){
         view.addSubview(tableView)
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(CellHealtViewController.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -41,18 +40,29 @@ final class TimeTableViewController: UIViewController, UITableViewDelegate {
         tableView.rightAnchor.constraint(equalTo: safe.rightAnchor).isActive = true
     }
     
+    fileprivate func crateArray(){
+        timesModel.append(TimeTableModel(time: "9:00"))
+        timesModel.append(TimeTableModel(time: "10:00"))
+        timesModel.append(TimeTableModel(time: "11:00"))
+    }
+    
 }
 
 extension TimeTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return times.count
+        return timesModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = times[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellHealtViewController
+        let times = timesModel[indexPath.row]
+        cell.time = times
+        
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
     
 }

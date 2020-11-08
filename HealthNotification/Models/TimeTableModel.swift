@@ -5,10 +5,17 @@
 //  Created by Rotach Roman on 07.11.2020.
 //
 
-import Foundation
+import UIKit
 
-final class TimeTableModel {
+public struct TimeTableModel {
     
-    var times = ["10:00", "11:00", "12:00"]
-//    var times: [String] = []
+    public var timeLable: String
+    public var iDistributer: Bool
+    
+    init(time: String, iDistributer: Bool = true) {
+        self.timeLable = time
+        self.iDistributer = iDistributer
+    }
+    
 }
+

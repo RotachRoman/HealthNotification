@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		CB8BB7E52556B57000EC035E /* TimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8BB7E42556B57000EC035E /* TimeTableView.swift */; };
 		CB8BB7E92556B59200EC035E /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8BB7E82556B59200EC035E /* TimeTableViewController.swift */; };
 		CB8BB7EE2556C4A100EC035E /* TimeTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8BB7ED2556C4A100EC035E /* TimeTableModel.swift */; };
+		CB8BB7F52558063B00EC035E /* CellHealtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8BB7F42558063A00EC035E /* CellHealtViewController.swift */; };
+		CB8BB7FF2558168900EC035E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8BB7FE2558168900EC035E /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		CB8BB7E42556B57000EC035E /* TimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableView.swift; sourceTree = "<group>"; };
 		CB8BB7E82556B59200EC035E /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
 		CB8BB7ED2556C4A100EC035E /* TimeTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableModel.swift; sourceTree = "<group>"; };
+		CB8BB7F42558063A00EC035E /* CellHealtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHealtViewController.swift; sourceTree = "<group>"; };
+		CB8BB7FE2558168900EC035E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 				CB8BB7E32556B50300EC035E /* Models */,
 				CB8BB7E12556B4F000EC035E /* Views */,
 				CB8BB7E22556B4FB00EC035E /* Controllers */,
+				CB8BB7FD2558166F00EC035E /* Extensions */,
 				CB8BB7E02556B4DA00EC035E /* Supporting_files */,
 			);
 			path = HealthNotification;
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				CB8BB7E82556B59200EC035E /* TimeTableViewController.swift */,
+				CB8BB7F42558063A00EC035E /* CellHealtViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +106,14 @@
 				CB8BB7ED2556C4A100EC035E /* TimeTableModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CB8BB7FD2558166F00EC035E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB8BB7FE2558168900EC035E /* Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +151,7 @@
 				};
 			};
 			buildConfigurationList = CB8BB7C12556B4A200EC035E /* Build configuration list for PBXProject "HealthNotification" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -171,6 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8BB7FF2558168900EC035E /* Extension.swift in Sources */,
+				CB8BB7F52558063B00EC035E /* CellHealtViewController.swift in Sources */,
 				CB8BB7EE2556C4A100EC035E /* TimeTableModel.swift in Sources */,
 				CB8BB7CA2556B4A200EC035E /* AppDelegate.swift in Sources */,
 				CB8BB7CC2556B4A200EC035E /* SceneDelegate.swift in Sources */,
