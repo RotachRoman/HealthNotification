@@ -15,9 +15,16 @@ final class TimeTableViewController: UIViewController, UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        editNavigation()
         crateArray()
         setupTableView()
         setupConstraints()
+    }
+    
+    private func editNavigation(){
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        self.navigationItem.title = "Health"
     }
 
     private func setupTableView(){

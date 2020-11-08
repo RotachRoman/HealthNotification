@@ -18,7 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = TimeTableViewController()
+        let nc = UINavigationController(rootViewController: TimeTableViewController())
+        window?.rootViewController = nc
         window?.makeKeyAndVisible()
     }
 
