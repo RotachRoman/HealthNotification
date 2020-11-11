@@ -12,9 +12,9 @@ public struct TimeTableModel {
     public var timeLable: String
     public var iDistributer: Bool
     
-    init(time: String, iDistributer: Bool = true) {
+    init(time: String) {
         self.timeLable = time
-        self.iDistributer = iDistributer
+        self.iDistributer = true
     }
     
 }
